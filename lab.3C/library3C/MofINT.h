@@ -12,7 +12,7 @@ namespace maximka {
 		MofINT(int size = 0);
 		MofINT(const MofINT&);
 		MofINT(int size, int* arr);
-		MofINT(MofINT&&);
+		MofINT(MofINT&&)noexcept;
 		~MofINT();
 		MofINT operator=(const MofINT&);
 		friend MofINT operator+(const MofINT&, const MofINT&);

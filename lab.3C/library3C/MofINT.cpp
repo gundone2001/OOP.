@@ -38,7 +38,7 @@ namespace maximka
 	}
 
 
-	MofINT::MofINT(MofINT&& other) 
+	MofINT::MofINT(MofINT&& other) noexcept
 	{
 		SIZE = other.SIZE;
 		pile = other.pile;
@@ -114,6 +114,8 @@ namespace maximka
 	}
 	int MofINT::getPILE(int number)const
 	{
+		if(SIZE == 0)
+			throw std::out_of_range("Error");
 		return pile[number];
 	}
 	MofINT MofINT::operator= (const MofINT& other )

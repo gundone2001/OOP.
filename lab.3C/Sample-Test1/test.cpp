@@ -24,7 +24,7 @@ TEST(Constructors, constructor) {
     ASSERT_EQ(3, object3.getSIZE());
     ASSERT_ANY_THROW(maximka::MofINT object4(-1));
 }
-TEST(operators , operator1) {
+TEST(operators , size ) {
     int m[] = { 7, 8 ,9  };
     maximka::MofINT object1(5);
     maximka::MofINT object2(3,m);
@@ -47,6 +47,33 @@ TEST(operators , operator1) {
     object1 += number;
 
     ASSERT_EQ(6, object1.getSIZE());
+
+
+}
+
+TEST(operators, value) {
+    int m[] = { 7, 8 ,9 };
+    maximka::MofINT object1(5);
+    maximka::MofINT object2(3, m);
+    maximka::MofINT object3;
+
+    object3 = object1 + object2;
+
+    ASSERT_EQ(1, object3.getPILE(1));
+
+    object3 = object1 * object2;
+
+    ASSERT_ANY_THROW(object3.getPILE(1));
+
+    object3 = object1 - object2;
+
+    ASSERT_EQ(4, object3.getPILE(4));
+
+    int number = 10;
+
+    object1 += number;
+
+    ASSERT_EQ(2, object3.getPILE(2));
 
     ASSERT_EQ(10, object1.getPILE(5));
 
