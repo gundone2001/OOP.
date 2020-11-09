@@ -19,8 +19,6 @@ TEST(Constructors, constructor) {
     int m[] = { 1, 2 ,3 };
     maximka::MofINT object3(3, m);
 
-
-
     ASSERT_EQ(3, object3.getSIZE());
     ASSERT_ANY_THROW(maximka::MofINT object4(-1));
 }
