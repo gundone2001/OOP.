@@ -3,6 +3,10 @@
 
 namespace maximka
 {
+
+	
+
+
 	MofINT::MofINT(int size )
 	{
 		if (size < 0)
@@ -224,11 +228,10 @@ namespace maximka
 		return tmp;
 	}
 
-	MofINT::~MofINT()
+	MofINT::~MofINT()// деструктор //выход из фукций/удаление памяти у локальных переменных 
 	{
 		delete[] pile;
 	}
-
 
 	int find(int* arr, int res, int maxindex)
 	{

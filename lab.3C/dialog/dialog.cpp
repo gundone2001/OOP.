@@ -2,7 +2,7 @@
 
 int main()
 {
-	maximka::MofINT first, second, third , extra;
+	maximka::MofINT first, second, third , extra , superextra;
 	maximka::MofINT massive[] = { first,second,third };
 	maximka::MofINT m[3];
 	while (true)
@@ -27,11 +27,15 @@ int main()
 
 		std::cout << " Oh, next ... Lets go check our functional" << std::endl;
 
+
 		std::cout << " 0 -> extra = first " << std::endl;
 
 		extra = first; 
 
 		std::cout << extra;
+
+
+
 
 		std::cout << " 1 -> union of first and second " << std::endl;
 		try {
